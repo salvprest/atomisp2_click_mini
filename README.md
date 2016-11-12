@@ -1,0 +1,1 @@
+# atomisp2_click_mini
