@@ -350,176 +350,176 @@ const struct atomisp_format_bridge atomisp_output_fmts[] = {
 	{
 		.pixelformat = V4L2_PIX_FMT_YUV420,
 		.depth = 12,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_YUV420,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_YUV420,
 		.sh_fmt = CSS_FRAME_FORMAT_YUV420,
 		.description = "YUV420, planar",
 		.planar = true
 	}, {
 		.pixelformat = V4L2_PIX_FMT_YVU420,
 		.depth = 12,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_YVU420,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_YVU420,
 		.sh_fmt = CSS_FRAME_FORMAT_YV12,
 		.description = "YVU420, planar",
 		.planar = true
 	}, {
 		.pixelformat = V4L2_PIX_FMT_YUV422P,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_YUV422P,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_YUV422P,
 		.sh_fmt = CSS_FRAME_FORMAT_YUV422,
 		.description = "YUV422, planar",
 		.planar = true
 	}, {
 		.pixelformat = V4L2_PIX_FMT_YUV444,
 		.depth = 24,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_YUV444,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_YUV444,
 		.sh_fmt = CSS_FRAME_FORMAT_YUV444,
 		.description = "YUV444"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_NV12,
 		.depth = 12,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_NV12,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_NV12,
 		.sh_fmt = CSS_FRAME_FORMAT_NV12,
 		.description = "NV12, Y-plane, CbCr interleaved",
 		.planar = true
 	}, {
 		.pixelformat = V4L2_PIX_FMT_NV21,
 		.depth = 12,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_NV21,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_NV21,
 		.sh_fmt = CSS_FRAME_FORMAT_NV21,
 		.description = "NV21, Y-plane, CbCr interleaved",
 		.planar = true
 	}, {
 		.pixelformat = V4L2_PIX_FMT_NV16,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_NV16,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_NV16,
 		.sh_fmt = CSS_FRAME_FORMAT_NV16,
 		.description = "NV16, Y-plane, CbCr interleaved",
 		.planar = true
 	}, {
 		.pixelformat = V4L2_PIX_FMT_YUYV,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_YUYV,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_YUYV,
 		.sh_fmt = CSS_FRAME_FORMAT_YUYV,
 		.description = "YUYV, interleaved"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_UYVY,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_UYVY8_1X16,
+		.mbus_code = MEDIA_BUS_FMT_UYVY8_1X16,
 		.sh_fmt = CSS_FRAME_FORMAT_UYVY,
 		.description = "UYVY, interleaved"
 	}, { /* This one is for parallel sensors! DO NOT USE! */
 		.pixelformat = V4L2_PIX_FMT_UYVY,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_UYVY8_2X8,
+		.mbus_code = MEDIA_BUS_FMT_UYVY8_2X8,
 		.sh_fmt = CSS_FRAME_FORMAT_UYVY,
 		.description = "UYVY, interleaved"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SBGGR16,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_SBGGR16,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_SBGGR16,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 16"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SBGGR8,
 		.depth = 8,
-		.mbus_code = V4L2_MBUS_FMT_SBGGR8_1X8,
+		.mbus_code = MEDIA_BUS_FMT_SBGGR8_1X8,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 8"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SGBRG8,
 		.depth = 8,
-		.mbus_code = V4L2_MBUS_FMT_SGBRG8_1X8,
+		.mbus_code = MEDIA_BUS_FMT_SGBRG8_1X8,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 8"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SGRBG8,
 		.depth = 8,
-		.mbus_code = V4L2_MBUS_FMT_SGRBG8_1X8,
+		.mbus_code = MEDIA_BUS_FMT_SGRBG8_1X8,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 8"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SRGGB8,
 		.depth = 8,
-		.mbus_code = V4L2_MBUS_FMT_SRGGB8_1X8,
+		.mbus_code = MEDIA_BUS_FMT_SRGGB8_1X8,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 8"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SBGGR10,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SBGGR10_1X10,
+		.mbus_code = MEDIA_BUS_FMT_SBGGR10_1X10,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 10"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SGBRG10,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SGBRG10_1X10,
+		.mbus_code = MEDIA_BUS_FMT_SGBRG10_1X10,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 10"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SGRBG10,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SGRBG10_1X10,
+		.mbus_code = MEDIA_BUS_FMT_SGRBG10_1X10,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
         .description = "Bayer 10"
     }, { // added for yuv during preview, fake RAW8 during capture
          .pixelformat = V4L2_PIX_FMT_SGBRG8,
          .depth = 16,
-         .mbus_code = V4L2_MBUS_FMT_UYVY8_1X16,
+         .mbus_code = MEDIA_BUS_FMT_UYVY8_1X16,
          .sh_fmt = CSS_FRAME_FORMAT_RAW,
          .description = "Bayer 10"
     }, {
 		.pixelformat = V4L2_PIX_FMT_SRGGB10,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SRGGB10_1X10,
+		.mbus_code = MEDIA_BUS_FMT_SRGGB10_1X10,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 10"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SBGGR12,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SBGGR12_1X12,
+		.mbus_code = MEDIA_BUS_FMT_SBGGR12_1X12,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 12"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SGBRG12,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SGBRG12_1X12,
+		.mbus_code = MEDIA_BUS_FMT_SGBRG12_1X12,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 12"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SGRBG12,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SGRBG12_1X12,
+		.mbus_code = MEDIA_BUS_FMT_SGRBG12_1X12,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 12"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_SRGGB12,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_SRGGB12_1X12,
+		.mbus_code = MEDIA_BUS_FMT_SRGGB12_1X12,
 		.sh_fmt = CSS_FRAME_FORMAT_RAW,
 		.description = "Bayer 12"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_RGB32,
 		.depth = 32,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_RGB32,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_RGB32,
 		.sh_fmt = CSS_FRAME_FORMAT_RGBA888,
 		.description = "32 RGB 8-8-8-8"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_RGB565,
 		.depth = 16,
-		.mbus_code = V4L2_MBUS_FMT_BGR565_2X8_LE,
+		.mbus_code = MEDIA_BUS_FMT_BGR565_2X8_LE,
 		.sh_fmt = CSS_FRAME_FORMAT_RGB565,
 		.description = "16 RGB 5-6-5"
 	}, {
 		.pixelformat = V4L2_PIX_FMT_JPEG,
 		.depth = 8,
-		.mbus_code = V4L2_MBUS_FMT_JPEG_1X8,
+		.mbus_code = MEDIA_BUS_FMT_JPEG_1X8,
 		.sh_fmt = CSS_FRAME_FORMAT_BINARY_8,
 		.description = "JPEG"
 	}, {
 	/* This is a custom format being used by M10MO to send the RAW data */
 		.pixelformat = V4L2_PIX_FMT_CUSTOM_M10MO_RAW,
 		.depth = 8,
-		.mbus_code = V4L2_MBUS_FMT_CUSTOM_M10MO_RAW,
+		.mbus_code = MEDIA_BUS_FMT_CUSTOM_M10MO_RAW,
 		.sh_fmt = CSS_FRAME_FORMAT_BINARY_8,
 		.description = "Custom RAW for M10MO"
 	},
@@ -539,7 +539,7 @@ const struct atomisp_format_bridge *atomisp_get_format_bridge(
 }
 
 const struct atomisp_format_bridge *atomisp_get_format_bridge_from_mbus(
-	enum v4l2_mbus_pixelcode mbus_code)
+	u32 mbus_code)
 {
 	unsigned int i;
 

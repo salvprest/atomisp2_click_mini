@@ -58,7 +58,7 @@ extern int pad_h;
 struct atomisp_format_bridge {
 	unsigned int pixelformat;
 	unsigned int depth;
-	enum v4l2_mbus_pixelcode mbus_code;
+	u32 mbus_code;
 	enum atomisp_css_frame_format sh_fmt;
 	unsigned char description[32];	/* the same as struct v4l2_fmtdesc */
 	bool planar;

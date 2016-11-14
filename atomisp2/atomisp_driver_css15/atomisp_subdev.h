@@ -61,7 +61,7 @@ enum atomisp_subdev_input_entity {
 #define ATOMISP_SUBDEV_PADS_NUM			5
 
 struct atomisp_in_fmt_conv {
-	enum v4l2_mbus_pixelcode code;
+	u32 code;
 	uint8_t bpp; /* bits per pixel */
 	uint8_t depth; /* uncompressed */
 	enum atomisp_css_stream_format in_sh_fmt;
@@ -317,13 +317,12 @@ struct atomisp_sub_device {
 
 extern const struct atomisp_in_fmt_conv atomisp_in_fmt_conv[];
 
-enum v4l2_mbus_pixelcode atomisp_subdev_uncompressed_code(
-	enum v4l2_mbus_pixelcode code);
-bool atomisp_subdev_is_compressed(enum v4l2_mbus_pixelcode code);
+u32 atomisp_subdev_uncompressed_code(u32 code);
+bool atomisp_subdev_is_compressed(u32 code);
 const struct atomisp_in_fmt_conv *atomisp_find_in_fmt_conv(
-	enum v4l2_mbus_pixelcode code);
+	u32 code);
 const struct atomisp_in_fmt_conv *atomisp_find_in_fmt_conv_compressed(
-	enum v4l2_mbus_pixelcode code);
+	u32 code);
 bool atomisp_subdev_format_conversion(struct atomisp_sub_device *asd,
 				      unsigned int source_pad);
 uint16_t atomisp_subdev_source_pad(struct video_device *vdev);

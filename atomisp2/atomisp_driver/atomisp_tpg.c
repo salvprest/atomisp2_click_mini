@@ -58,7 +58,7 @@ static int tpg_enum_frameintervals(struct v4l2_subdev *sd,
 }
 
 static int tpg_enum_mbus_fmt(struct v4l2_subdev *sd, unsigned int index,
-				enum v4l2_mbus_pixelcode *code)
+				u32 *code)
 {
 	/*to fake*/
 	return 0;
@@ -68,7 +68,7 @@ static int tpg_try_mbus_fmt(struct v4l2_subdev *sd,
 			       struct v4l2_mbus_framefmt *fmt)
 {
 	/* only raw8 grbg is supported by TPG */
-	fmt->code = V4L2_MBUS_FMT_SGRBG8_1X8;
+	fmt->code = MEDIA_BUS_FMT_SGRBG8_1X8;
 	return 0;
 }
 
@@ -83,7 +83,7 @@ static int tpg_s_mbus_fmt(struct v4l2_subdev *sd,
 			     struct v4l2_mbus_framefmt *fmt)
 {
 	/* only raw8 grbg is supported by TPG */
-	fmt->code = V4L2_MBUS_FMT_SGRBG8_1X8;
+	fmt->code = MEDIA_BUS_FMT_SGRBG8_1X8;
 	return 0;
 }
 
