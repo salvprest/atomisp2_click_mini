@@ -91,14 +91,6 @@ static int tpg_s_mbus_fmt(struct v4l2_subdev *sd,
 	return 0;
 }
 
-static int tpg_g_chip_ident(struct v4l2_subdev *sd,
-			       struct v4l2_dbg_chip_ident *chip)
-{
-	if (!chip)
-		return -EINVAL;
-	return 0;
-}
-
 static int tpg_log_status(struct v4l2_subdev *sd)
 {
 	/*to fake*/
@@ -179,7 +171,6 @@ static const struct v4l2_subdev_video_ops tpg_video_ops = {
 };
 
 static const struct v4l2_subdev_core_ops tpg_core_ops = {
-	.g_chip_ident = tpg_g_chip_ident,
 	.log_status = tpg_log_status,
 	.queryctrl = tpg_queryctrl,
 	.g_ctrl = tpg_g_ctrl,

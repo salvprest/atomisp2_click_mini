@@ -147,15 +147,6 @@ static int file_input_s_mbus_fmt(struct v4l2_subdev *sd,
 	return 0;
 }
 
-static int file_input_g_chip_ident(struct v4l2_subdev *sd,
-			       struct v4l2_dbg_chip_ident *chip)
-{
-	if (!chip)
-		return -EINVAL;
-
-	return 0;
-}
-
 static int file_input_log_status(struct v4l2_subdev *sd)
 {
 	/*to fake*/
@@ -224,7 +215,6 @@ static const struct v4l2_subdev_video_ops file_input_video_ops = {
 };
 
 static const struct v4l2_subdev_core_ops file_input_core_ops = {
-	.g_chip_ident = file_input_g_chip_ident,
 	.log_status = file_input_log_status,
 	.queryctrl = file_input_queryctrl,
 	.g_ctrl = file_input_g_ctrl,
