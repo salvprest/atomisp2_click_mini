@@ -61,13 +61,6 @@ static int tpg_enum_frameintervals(struct v4l2_subdev *sd,
 	return 0;
 }
 
-static int tpg_enum_mbus_fmt(struct v4l2_subdev *sd, unsigned int index,
-				u32 *code)
-{
-	/*to fake*/
-	return 0;
-}
-
 static int tpg_try_mbus_fmt(struct v4l2_subdev *sd,
 			       struct v4l2_mbus_framefmt *fmt)
 {
@@ -164,7 +157,6 @@ static const struct v4l2_subdev_video_ops tpg_video_ops = {
 	.s_parm = tpg_s_parm,
 	.enum_framesizes = tpg_enum_framesizes,
 	.enum_frameintervals = tpg_enum_frameintervals,
-	.enum_mbus_fmt = tpg_enum_mbus_fmt,
 	.try_mbus_fmt = tpg_try_mbus_fmt,
 	.g_mbus_fmt = tpg_g_mbus_fmt,
 	.s_mbus_fmt = tpg_s_mbus_fmt,
