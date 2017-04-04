@@ -31,9 +31,6 @@
 #include <linux/kfifo.h>
 #include <linux/pm_runtime.h>
 #include <linux/timer.h>
-#ifndef CONFIG_GMIN_INTEL_MID
-#include <linux/kct.h>
-#endif
 #include <asm/intel-mid.h>
 
 #include <media/v4l2-event.h>
@@ -1514,12 +1511,6 @@ void atomisp_wdt_work(struct work_struct *work)
 		rt_mutex_unlock(&isp->mutex);
 		return;
 	}
-
-#ifndef CONFIG_GMIN_INTEL_MID
-	/* Push CrashEvent log for recovery cases tracking */
-	if (dbg_level > 5)
-		kct_log(CT_EV_CRASH, "ATOMISP2", "TIMEOUT", 0, "", "", "", "", "", "", "/logs/aplog");
-#endif
 
 	__atomisp_css_recover(isp, true);
 	atomisp_set_stop_timeout(ATOMISP_CSS_STOP_TIMEOUT_US);
