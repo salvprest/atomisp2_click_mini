@@ -918,6 +918,12 @@ static int atomisp_enum_frameintervals(struct file *file, void *fh,
 	struct video_device *vdev = video_devdata(file);
 	struct atomisp_device *isp = video_get_drvdata(vdev);
 	struct atomisp_sub_device *asd = atomisp_to_video_pipe(vdev)->asd;
+	struct v4l2_subdev_frame_interval_enum fie = {
+		.index = arg->index,
+		.width = arg->width,
+		.height = arg->height,
+		.which = V4L2_SUBDEV_FORMAT_ACTIVE,
+	};
 	int ret;
 
 	if (arg->index != 0)
@@ -931,7 +937,7 @@ static int atomisp_enum_frameintervals(struct file *file, void *fh,
 
 	rt_mutex_lock(&isp->mutex);
 	ret = v4l2_subdev_call(isp->inputs[asd->input_curr].camera,
-		video, enum_frameintervals, arg);
+		pad, enum_frame_interval, NULL, &fie);
 
 	if (ret) {
 		/* set the FPS to default 15*/
