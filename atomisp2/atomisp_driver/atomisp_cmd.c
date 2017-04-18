@@ -37,6 +37,7 @@
 
 #include <media/v4l2-event.h>
 #include <media/videobuf-vmalloc.h>
+#include <linux/vmalloc.h>
 
 #include "atomisp_cmd.h"
 #include "atomisp_common.h"
