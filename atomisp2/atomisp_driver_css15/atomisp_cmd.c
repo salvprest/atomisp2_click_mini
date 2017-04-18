@@ -29,6 +29,8 @@
 #include <linux/timer.h>
 
 #include <asm/intel-mid.h>
+#include <asm/spid.h>
+#include <asm/intel_mid_pcihelpers.h>
 
 #include <media/v4l2-event.h>
 #include <media/videobuf-vmalloc.h>
